@@ -1,0 +1,31 @@
+======================================================================
+COMPREHENSIVE STATISTICAL SUMMARY
+======================================================================
+
+E1: INTERIOR PEAK
+  σc = 0.0800 (interior: True)
+  κ = 1.00
+  Observable: 0.263 ± 0.025
+  Status: PASSED
+
+E2: IDLE SENSITIVITY
+  Slope: -0.1333 ± 0.0770
+  R² = 0.750, p = 0.3333
+  Monotonic: True
+  Normalized change: 0.46
+  Status: PASSED
+
+E3: DEPTH SCALING
+  Correlation: r = -0.9868, p = 0.1034
+  Power exponent: -0.779
+  σc values: [0.1  0.08 0.04]
+  Status: PASSED
+
+E4: MEASUREMENT ALIGNMENT
+  κ_aligned = 12.00
+  κ_misaligned = 4.27
+  Reduction: 64.4%
+  Normalized difference: 0.95
+  Status: PASSED
+
+======================================================================

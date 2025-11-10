@@ -1,0 +1,17 @@
+\begin{table}[h]
+\centering
+\caption{E2 Enhanced Memory Scaling: Statistical Validation}
+\label{tab:e2_enhanced}
+\begin{tabular}{lll}
+\toprule
+\textbf{Test} & \textbf{Statistic} & \textbf{Result} \\
+\midrule
+Jonckheere-Terpstra & $z=1.225$ & $p=0.1103$ \\
+Linear Regression & $\beta_1=-0.470$ & $R^2=0.524$ \\
+& 95\% CI: [-1.043, 0.435] & \\
+Pairwise Monotonic & 75\% pairs & PASS \\
+Endpoint Decrease & 88.9\% reduction & PASS \\
+$\sigma_k$ Robustness & 95.2\% variation & SENSITIVE \\
+\bottomrule
+\end{tabular}
+\end{table}

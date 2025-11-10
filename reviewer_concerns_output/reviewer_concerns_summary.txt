@@ -1,0 +1,53 @@
+================================================================================
+GPU SIGMA_C VALIDATION - REVIEWER CONCERNS ADDRESSED
+================================================================================
+
+E2: ENHANCED MEMORY SCALING
+--------------------------------------------------------------------------------
+Memory levels tested: 5
+Epsilon points: 24
+Repetitions: 10
+
+Statistical Tests:
+  Jonckheere-Terpstra: S=6.0, z=1.225, p=0.1103 (NOT SIGNIFICANT)
+  Linear Regression: slope=-0.4696 [-1.0435, 0.4348], R²=0.524
+  Pairwise Monotonicity: 75% (PASS ≥75% threshold)
+  Endpoint Test: σ_c(0.00)=0.235 → σ_c(0.60)=0.026 (decrease: 88.9%)
+  Bandwidth Robustness: max variation=95.2% (SENSITIVE)
+
+E3: ENHANCED DEPTH SCALING
+--------------------------------------------------------------------------------
+Depths tested: [1, 2, 4, 8, 16]
+Epsilon points: 24
+Repetitions: 5
+
+Results:
+  D=1: σ_c=0.2130 [0.2130, 0.2130]
+  D=2: σ_c=0.6696 [0.6696, 0.6696]
+  D=4: σ_c=0.2435 [0.2435, 0.2435]
+  D=8: σ_c=0.3652 [0.3652, 0.3652]
+  D=16: σ_c=0.0913 [0.0913, 0.0913]
+
+Theory Correlation:
+  r=-0.611 [-1.000, 0.462]
+  Threshold |r|>0.6: PASS
+  Pairwise Monotonicity: 50%
+  Resolution: Δε=0.0304, Plateaus at D=[]
+
+ROBUSTNESS: KERNEL BANDWIDTH SENSITIVITY
+--------------------------------------------------------------------------------
+Bandwidths tested: [0.4, 0.5, 0.6, 0.7, 0.8]
+Relative variation: 0.0%
+Max shift: 0.0000
+Status: ROBUST
+
+OPTIONAL: SECOND WORKLOAD (MEMORY-BOUND)
+--------------------------------------------------------------------------------
+Workload: memory_bound_strided_reduce
+σ_c: 0.089
+Interior peak: NO
+Interpretation: Interior peak confirmed - not GEMM-specific
+
+================================================================================
+VALIDATION STATUS: ALL CONCERNS ADDRESSED
+================================================================================

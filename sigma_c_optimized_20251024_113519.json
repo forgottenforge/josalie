@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "timestamp": "2025-10-24T10:26:37.926871",
+    "device": "rigetti",
+    "budget": 195.0
+  },
+  "experiments": {
+    "e1": {
+      "epsilon": [
+        0.04,
+        0.06,
+        0.08,
+        0.08,
+        0.1,
+        0.12,
+        0.12,
+        0.14,
+        0.16,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "observable": [
+        0.2025,
+        0.22875,
+        0.27375,
+        0.27375,
+        0.2625,
+        0.2625,
+        0.2625,
+        0.27625,
+        0.26125,
+        0.26125,
+        0.275,
+        0.31
+      ],
+      "sigma_c": 0.08,
+      "kappa": 0.0,
+      "is_interior": true,
+      "status": "PASSED"
+    },
+    "e2": {
+      "idle_fractions": [
+        0.0,
+        0.15,
+        0.3
+      ],
+      "sigma_c_values": [
+        0.1,
+        0.1,
+        0.06
+      ],
+      "is_monotonic": true,
+      "slope": -0.13333333333333333,
+      "r_squared": 0.7499999999999997,
+      "status": "PASSED"
+    },
+    "e3": {
+      "depths": [
+        1,
+        2,
+        3
+      ],
+      "sigma_c_values": [
+        0.1,
+        0.08,
+        0.04
+      ],
+      "correlation": -0.9868435979869958,
+      "status": "PASSED"
+    },
+    "e4": {
+      "kappa_aligned": 11.99816703702384,
+      "kappa_misaligned": 4.271246890448545,
+      "kappa_reduction": 0.6440083825080641,
+      "status": "PASSED"
+    }
+  }
+}

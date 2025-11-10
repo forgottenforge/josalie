@@ -1,0 +1,7 @@
+2025-11-06 21:02:39,638 - FinancialSigmaCValidator - INFO - Initialized Financial sigma_c Validator v2.0.0
+2025-11-06 21:02:39,638 - FinancialSigmaCValidator - INFO - Starting Financial sigma_c Validation Framework v2.0.0
+2025-11-06 21:02:39,638 - FinancialSigmaCValidator - INFO - Seed: 42
+2025-11-06 21:02:39,639 - FinancialSigmaCValidator - INFO - Loading cached data from cache\market_data_8e43fcd1.pkl
+2025-11-06 21:02:39,646 - FinancialSigmaCValidator - INFO - ======================================================================
+2025-11-06 21:02:39,646 - FinancialSigmaCValidator - INFO - H1: INTERIOR PEAK DETECTION
+2025-11-06 21:02:39,647 - FinancialSigmaCValidator - INFO - ======================================================================
