@@ -1,0 +1,15 @@
+2025-10-26 11:50:10,466 | INFO     | Log file: out\seismic_validation_20251026_115010.log
+2025-10-26 11:50:10,466 | INFO     | Initialized SigmaCSeismicValidator v1.0.0
+2025-10-26 11:50:10,467 | INFO     | Seed: 42, Fast mode: False
+2025-10-26 11:50:10,467 | INFO     | ======================================================================
+2025-10-26 11:50:10,467 | INFO     | STARTING SEISMIC SIGMA_C VALIDATION
+2025-10-26 11:50:10,467 | INFO     | ======================================================================
+2025-10-26 11:50:10,467 | INFO     | 
+[1/8] Fetching earthquake catalog...
+2025-10-26 11:50:10,467 | INFO     | Using cached catalog: cache\catalog_b77ecea7.csv
+2025-10-26 11:50:10,816 | INFO     | 
+[2/8] Running H1_interior_peak...
+2025-10-26 11:50:10,816 | INFO     | ======================================================================
+2025-10-26 11:50:10,817 | INFO     | H1: INTERIOR PEAK DETECTION
+2025-10-26 11:50:10,817 | INFO     | ======================================================================
+2025-10-26 11:50:29,728 | INFO     |   Computing bootstrap CI (1000 samples)...

@@ -1,0 +1,129 @@
+2025-10-26 16:37:30,293 | INFO     | Log file: out\seismic_validation_20251026_163730.log
+2025-10-26 16:37:30,293 | INFO     | Initialized SigmaCSeismicValidator v2.0.0 (Optimized)
+2025-10-26 16:37:30,293 | INFO     | Seed: 42, Fast mode: True
+2025-10-26 16:37:30,294 | INFO     | ======================================================================
+2025-10-26 16:37:30,294 | INFO     | STARTING SEISMIC SIGMA_C VALIDATION (v2.0 - OPTIMIZED)
+2025-10-26 16:37:30,294 | INFO     | ======================================================================
+2025-10-26 16:37:30,294 | INFO     | 
+[1/8] Fetching earthquake catalog...
+2025-10-26 16:37:30,294 | INFO     | Skip download mode - loading from cache
+2025-10-26 16:37:30,295 | INFO     | Loading cached catalog: cache\catalog_71b481ae.csv
+2025-10-26 16:37:30,419 | INFO     | 
+[2/8] Running H1_interior_peak...
+2025-10-26 16:37:30,420 | INFO     | ======================================================================
+2025-10-26 16:37:30,420 | INFO     | H1: INTERIOR PEAK DETECTION
+2025-10-26 16:37:30,420 | INFO     | ======================================================================
+2025-10-26 16:37:36,929 | INFO     |   Computing bootstrap CI (200 samples)...
+2025-10-26 16:37:36,929 | INFO     | sigma_c = 4.413 [3.883, 4.804]
+2025-10-26 16:37:36,929 | INFO     | kappa = 19.80
+2025-10-26 16:37:36,930 | INFO     | Interior: True, p = 0.0010
+2025-10-26 16:37:36,930 | INFO     | Status: PASSED
+2025-10-26 16:37:36,930 | INFO     | 
+[3/8] Running H2_sr_noise_enhancement...
+2025-10-26 16:37:36,930 | INFO     | ======================================================================
+2025-10-26 16:37:36,930 | INFO     | H2: SR-NOISE ENHANCEMENT
+2025-10-26 16:37:36,931 | INFO     | ======================================================================
+2025-10-26 16:37:43,379 | INFO     | Baseline AUC: 0.910 +/- 0.005
+2025-10-26 16:37:43,379 | INFO     | SR AUC: 0.945 +/- 0.005
+2025-10-26 16:37:43,379 | INFO     | Delta AUC: 0.035 [0.035, 0.035]
+2025-10-26 16:37:43,379 | INFO     | p = 0.0300
+2025-10-26 16:37:43,379 | INFO     | Status: PASSED
+2025-10-26 16:37:43,380 | INFO     | 
+[4/8] Running H3_temporal_scaling...
+2025-10-26 16:37:43,380 | INFO     | ======================================================================
+2025-10-26 16:37:43,380 | INFO     | H3: TEMPORAL SCALING
+2025-10-26 16:37:43,380 | INFO     | ======================================================================
+2025-10-26 16:37:43,380 | INFO     |   Window T = 30 days
+2025-10-26 16:37:43,444 | ERROR    | Error in H3_temporal_scaling: single positional indexer is out-of-bounds
+Traceback (most recent call last):
+  File "d:\code\ver\sizemo\sigma_cize.py", line 1720, in run_validation
+    result = test_func()
+  File "d:\code\ver\sizemo\sigma_cize.py", line 802, in test_h3_temporal_scaling
+    stress_field = self.compute_stress_proxy_enhanced(
+        self.catalog,
+    ...<2 lines>...
+        accumulation_mode='temporal'  # Key enhancement
+    )
+  File "d:\code\ver\sizemo\sigma_cize.py", line 386, in compute_stress_proxy_enhanced
+    energy *= time_weights.iloc[idx] if isinstance(time_weights, pd.Series) else time_weights[idx]
+              ~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\WurmMKG\AppData\Roaming\Python\Python313\site-packages\pandas\core\indexing.py", line 1191, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\WurmMKG\AppData\Roaming\Python\Python313\site-packages\pandas\core\indexing.py", line 1752, in _getitem_axis
+    self._validate_integer(key, axis)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\WurmMKG\AppData\Roaming\Python\Python313\site-packages\pandas\core\indexing.py", line 1685, in _validate_integer
+    raise IndexError("single positional indexer is out-of-bounds")
+IndexError: single positional indexer is out-of-bounds
+2025-10-26 16:37:43,460 | INFO     | 
+[5/8] Running H4_spatial_resolution...
+2025-10-26 16:37:43,460 | INFO     | ======================================================================
+2025-10-26 16:37:43,460 | INFO     | H4: SPATIAL RESOLUTION
+2025-10-26 16:37:43,460 | INFO     | ======================================================================
+2025-10-26 16:37:43,460 | INFO     |   Resolution R = 5 km
+2025-10-26 16:37:49,958 | INFO     |     sigma_c(R=5) = 3.576
+2025-10-26 16:37:49,958 | INFO     |   Resolution R = 10 km
+2025-10-26 16:37:56,381 | INFO     |     sigma_c(R=10) = 3.402
+2025-10-26 16:37:56,381 | INFO     |   Resolution R = 20 km
+2025-10-26 16:38:02,733 | INFO     |     sigma_c(R=20) = 3.500
+2025-10-26 16:38:02,734 | INFO     |   Resolution R = 30 km
+2025-10-26 16:38:09,018 | INFO     |     sigma_c(R=30) = 3.492
+2025-10-26 16:38:09,018 | INFO     | CV = 0.018 [0.000, 0.068]
+2025-10-26 16:38:09,018 | INFO     | Mean sigma_c = 3.492 +/- 0.062
+2025-10-26 16:38:09,018 | INFO     | p(CV >= 0.3) = 0.0200
+2025-10-26 16:38:09,018 | INFO     | Status: PASSED
+2025-10-26 16:38:09,019 | INFO     | 
+[6/8] Running H5_magnitude_threshold...
+2025-10-26 16:38:09,019 | INFO     | ======================================================================
+2025-10-26 16:38:09,019 | INFO     | H5: MAGNITUDE THRESHOLD
+2025-10-26 16:38:09,019 | INFO     | ======================================================================
+2025-10-26 16:38:09,020 | INFO     |   Magnitude M >= 3.5: 1669 events
+2025-10-26 16:38:09,031 | ERROR    | Error in H5_magnitude_threshold: single positional indexer is out-of-bounds
+Traceback (most recent call last):
+  File "d:\code\ver\sizemo\sigma_cize.py", line 1720, in run_validation
+    result = test_func()
+  File "d:\code\ver\sizemo\sigma_cize.py", line 1022, in test_h5_magnitude_threshold
+    stress_field = self.compute_stress_proxy_enhanced(
+        subset,
+        resolution_km=10.0,
+        accumulation_mode='magnitude'  # Magnitude-weighted
+    )
+  File "d:\code\ver\sizemo\sigma_cize.py", line 386, in compute_stress_proxy_enhanced
+    energy *= time_weights.iloc[idx] if isinstance(time_weights, pd.Series) else time_weights[idx]
+              ~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\WurmMKG\AppData\Roaming\Python\Python313\site-packages\pandas\core\indexing.py", line 1191, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\WurmMKG\AppData\Roaming\Python\Python313\site-packages\pandas\core\indexing.py", line 1752, in _getitem_axis
+    self._validate_integer(key, axis)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\WurmMKG\AppData\Roaming\Python\Python313\site-packages\pandas\core\indexing.py", line 1685, in _validate_integer
+    raise IndexError("single positional indexer is out-of-bounds")
+IndexError: single positional indexer is out-of-bounds
+2025-10-26 16:38:09,032 | INFO     | 
+[7/8] Running H6_cross_validation...
+2025-10-26 16:38:09,032 | INFO     | ======================================================================
+2025-10-26 16:38:09,032 | INFO     | H6: CROSS-VALIDATION CONSISTENCY
+2025-10-26 16:38:09,033 | INFO     | ======================================================================
+2025-10-26 16:38:09,042 | INFO     |   Fold 1: 6973 training events
+2025-10-26 16:38:10,112 | INFO     |     sigma_c = 3.467
+2025-10-26 16:38:10,113 | INFO     |   Fold 2: 13944 training events
+2025-10-26 16:38:12,253 | INFO     |     sigma_c = 4.080
+2025-10-26 16:38:12,256 | INFO     |   Fold 3: 20915 training events
+2025-10-26 16:38:15,471 | INFO     |     sigma_c = 3.600
+2025-10-26 16:38:15,474 | INFO     |   Fold 4: 27886 training events
+2025-10-26 16:38:19,743 | INFO     |     sigma_c = 3.534
+2025-10-26 16:38:19,748 | INFO     |   Fold 5: 34857 training events
+2025-10-26 16:38:25,094 | INFO     |     sigma_c = 3.550
+2025-10-26 16:38:25,094 | INFO     | CV = 0.061 [0.031, 0.091]
+2025-10-26 16:38:25,094 | INFO     | Mean sigma_c = 3.646 +/- 0.221
+2025-10-26 16:38:25,095 | INFO     | Folds: 5
+2025-10-26 16:38:25,095 | INFO     | Status: PASSED
+2025-10-26 16:38:25,097 | INFO     | 
+[8/8] Saving results...
+2025-10-26 16:38:25,099 | INFO     | Results saved: out\seismic_validation_results.json
+2025-10-26 16:38:25,136 | INFO     | Manifest saved: out\manifest.csv
+2025-10-26 16:38:25,136 | INFO     | LaTeX table saved: out\results_table.tex
+2025-10-26 16:38:25,137 | INFO     | 
+Total runtime: 0.9 minutes

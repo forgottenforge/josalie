@@ -1,0 +1,257 @@
+{
+  "device": "NVIDIA GeForce RTX 3060",
+  "timestamp": "2025-11-01T19:39:33.132100",
+  "parameter_space": [],
+  "chaos_map": [
+    {
+      "size": 512,
+      "thermal_state": "cool",
+      "memory_alpha": 0.5,
+      "sigma_c_median": 0.0,
+      "sigma_c_mad": 0.0,
+      "sigma_c_cv": 1.0,
+      "sigma_c_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.6000000000000001,
+        0.30000000000000004
+      ],
+      "stability": "CHAOTIC",
+      "chaos_metrics": {
+        "chaos_index": 0.1278375345543973,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0019102897552812925,
+        "perf_cv": 0.0928544362782415,
+        "predictability": 0.004008542801313946,
+        "chaos_level": "CHAOTIC"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 512,
+      "thermal_state": "cool",
+      "memory_alpha": 1.0,
+      "sigma_c_median": 0.2,
+      "sigma_c_mad": 0.2,
+      "sigma_c_cv": 1.0,
+      "sigma_c_values": [
+        1.0,
+        0.2,
+        0.5,
+        0.0,
+        0.0
+      ],
+      "stability": "CHAOTIC",
+      "chaos_metrics": {
+        "chaos_index": 0.13196093562172673,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0,
+        "perf_cv": 0.10653645207242242,
+        "predictability": 0.0,
+        "chaos_level": "CHAOTIC"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 512,
+      "thermal_state": "cool",
+      "memory_alpha": 1.5,
+      "sigma_c_median": 0.9,
+      "sigma_c_mad": 0.09999999999999998,
+      "sigma_c_cv": 0.11111111111111108,
+      "sigma_c_values": [
+        1.0,
+        1.0,
+        0.4,
+        0.9,
+        0.5
+      ],
+      "stability": "CHAOTIC",
+      "chaos_metrics": {
+        "chaos_index": 0.1357288314898495,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0,
+        "perf_cv": 0.11909610496616496,
+        "predictability": 0.0,
+        "chaos_level": "CHAOTIC"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 512,
+      "thermal_state": "normal",
+      "memory_alpha": 0.5,
+      "sigma_c_median": 1.0,
+      "sigma_c_mad": 0.0,
+      "sigma_c_cv": 0.0,
+      "sigma_c_values": [
+        1.0,
+        0.7000000000000001,
+        1.0,
+        1.0,
+        0.30000000000000004
+      ],
+      "stability": "STABLE",
+      "chaos_metrics": {
+        "chaos_index": 0.13206436917399197,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0,
+        "perf_cv": 0.10688123057997316,
+        "predictability": 0.0,
+        "chaos_level": "STABLE"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 512,
+      "thermal_state": "normal",
+      "memory_alpha": 1.0,
+      "sigma_c_median": 0.6000000000000001,
+      "sigma_c_mad": 0.30000000000000004,
+      "sigma_c_cv": 0.5,
+      "sigma_c_values": [
+        0.6000000000000001,
+        0.0,
+        0.7000000000000001,
+        0.30000000000000004,
+        1.0
+      ],
+      "stability": "CHAOTIC",
+      "chaos_metrics": {
+        "chaos_index": 0.11260929044793548,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0,
+        "perf_cv": 0.06190258185443999,
+        "predictability": 0.05961484108396527,
+        "chaos_level": "CHAOTIC"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 512,
+      "thermal_state": "normal",
+      "memory_alpha": 1.5,
+      "sigma_c_median": 0.6000000000000001,
+      "sigma_c_mad": 0.0,
+      "sigma_c_cv": 0.0,
+      "sigma_c_values": [
+        1.0,
+        0.6000000000000001,
+        0.6000000000000001,
+        0.6000000000000001,
+        0.0
+      ],
+      "stability": "STABLE",
+      "chaos_metrics": {
+        "chaos_index": 0.12443822763288837,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0,
+        "perf_cv": 0.08146075877629452,
+        "predictability": 0.0,
+        "chaos_level": "STABLE"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 512,
+      "thermal_state": "warm",
+      "memory_alpha": 0.5,
+      "sigma_c_median": 1.0,
+      "sigma_c_mad": 0.0,
+      "sigma_c_cv": 0.0,
+      "sigma_c_values": [
+        1.0,
+        1.0,
+        1.0,
+        0.6000000000000001,
+        0.0
+      ],
+      "stability": "STABLE",
+      "chaos_metrics": {
+        "chaos_index": 0.12821189001117372,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0,
+        "perf_cv": 0.09403963337057906,
+        "predictability": 0.0,
+        "chaos_level": "STABLE"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 512,
+      "thermal_state": "warm",
+      "memory_alpha": 1.0,
+      "sigma_c_median": 0.30000000000000004,
+      "sigma_c_mad": 0.30000000000000004,
+      "sigma_c_cv": 1.0,
+      "sigma_c_values": [
+        0.0,
+        1.0,
+        0.0,
+        0.30000000000000004,
+        0.7000000000000001
+      ],
+      "stability": "CHAOTIC",
+      "chaos_metrics": {
+        "chaos_index": 0.12765567861077717,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0,
+        "perf_cv": 0.09248697460324837,
+        "predictability": 0.0009041377019735371,
+        "chaos_level": "CHAOTIC"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 512,
+      "thermal_state": "warm",
+      "memory_alpha": 1.5,
+      "sigma_c_median": 0.30000000000000004,
+      "sigma_c_mad": 0.30000000000000004,
+      "sigma_c_cv": 1.0,
+      "sigma_c_values": [
+        0.0,
+        1.0,
+        0.30000000000000004,
+        1.0,
+        0.30000000000000004
+      ],
+      "stability": "CHAOTIC",
+      "chaos_metrics": {
+        "chaos_index": 0.1346802200894996,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0,
+        "perf_cv": 0.11560073363166526,
+        "predictability": 0.0,
+        "chaos_level": "CHAOTIC"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 1024,
+      "thermal_state": "cool",
+      "memory_alpha": 0.5,
+      "sigma_c_median": 0.4,
+      "sigma_c_mad": 0.20000000000000007,
+      "sigma_c_cv": 0.5000000000000001,
+      "sigma_c_values": [
+        0.4,
+        0.6000000000000001,
+        0.6000000000000001,
+        0.0,
+        0.30000000000000004
+      ],
+      "stability": "CHAOTIC",
+      "chaos_metrics": {
+        "chaos_index": 0.11257632704041678,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0,
+        "perf_cv": 0.041921090134722575,
+        "predictability": 0.0,
+        "chaos_level": "CHAOTIC"
+      },
+      "n_passes": 5
+    }
+  ]
+}

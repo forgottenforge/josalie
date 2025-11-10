@@ -1,0 +1,125 @@
+2025-10-26 14:35:36,564 | INFO     | Log file: out\seismic_validation_20251026_143536.log
+2025-10-26 14:35:36,564 | INFO     | Initialized SigmaCSeismicValidator v1.0.0
+2025-10-26 14:35:36,564 | INFO     | Seed: 42, Fast mode: True
+2025-10-26 14:35:36,564 | INFO     | ======================================================================
+2025-10-26 14:35:36,564 | INFO     | STARTING SEISMIC SIGMA_C VALIDATION
+2025-10-26 14:35:36,564 | INFO     | ======================================================================
+2025-10-26 14:35:36,565 | INFO     | 
+[1/8] Fetching earthquake catalog...
+2025-10-26 14:35:36,565 | INFO     | Skip download mode - loading from cache
+2025-10-26 14:35:36,565 | INFO     | Loading cached catalog: cache\catalog_71b481ae.csv
+2025-10-26 14:35:36,685 | INFO     | 
+[2/8] Running H1_interior_peak...
+2025-10-26 14:35:36,685 | INFO     | ======================================================================
+2025-10-26 14:35:36,685 | INFO     | H1: INTERIOR PEAK DETECTION
+2025-10-26 14:35:36,685 | INFO     | ======================================================================
+2025-10-26 14:35:42,934 | INFO     |   Computing bootstrap CI (200 samples)...
+2025-10-26 14:56:35,859 | INFO     | sigma_c = 4.022 [3.043, 4.413]
+2025-10-26 14:56:35,859 | INFO     | kappa = 2.05
+2025-10-26 14:56:35,859 | INFO     | Interior: True, p = 1.0000
+2025-10-26 14:56:35,859 | INFO     | Status: PASSED
+2025-10-26 14:56:35,859 | INFO     | 
+[3/8] Running H2_sr_noise_enhancement...
+2025-10-26 14:56:35,859 | INFO     | ======================================================================
+2025-10-26 14:56:35,860 | INFO     | H2: SR-NOISE ENHANCEMENT
+2025-10-26 14:56:35,860 | INFO     | ======================================================================
+2025-10-26 14:56:42,164 | INFO     | Baseline AUC: 1.000 +/- 0.000
+2025-10-26 14:56:42,164 | INFO     | SR AUC: 1.000 +/- 0.000
+2025-10-26 14:56:42,165 | INFO     | Delta AUC: 0.000 [0.000, 0.000]
+2025-10-26 14:56:42,165 | INFO     | p = 1.0000
+2025-10-26 14:56:42,165 | INFO     | Status: FAILED
+2025-10-26 14:56:42,165 | INFO     | 
+[4/8] Running H3_temporal_scaling...
+2025-10-26 14:56:42,165 | INFO     | ======================================================================
+2025-10-26 14:56:42,166 | INFO     | H3: TEMPORAL SCALING
+2025-10-26 14:56:42,166 | INFO     | ======================================================================
+2025-10-26 14:56:42,166 | INFO     |   Window T = 30 days
+2025-10-26 14:56:42,167 | ERROR    | Error in H3_temporal_scaling: time data "2015-11-06 04:24:01+00:00" doesn't match format "%Y-%m-%d %H:%M:%S.%f%z", at position 80. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+Traceback (most recent call last):
+  File "d:\code\ver\sizemo\sigma_cize.py", line 1685, in run_validation
+    result = test_func()
+  File "d:\code\ver\sizemo\sigma_cize.py", line 812, in test_h3_temporal_scaling
+    stress_field = self.compute_stress_proxy(
+        self.catalog,
+        resolution_km=10.0,
+        time_window_days=T
+    )
+  File "d:\code\ver\sizemo\sigma_cize.py", line 336, in compute_stress_proxy
+    catalog['time'] = pd.to_datetime(catalog['time'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\WurmMKG\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\WurmMKG\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 433, in _convert_listlike_datetimes
+    return _array_strptime_with_fallback(arg, name, utc, format, exact, errors)
+  File "C:\Users\WurmMKG\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 467, in _array_strptime_with_fallback
+    result, tz_out = array_strptime(arg, fmt, exact=exact, errors=errors, utc=utc)
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "strptime.pyx", line 501, in pandas._libs.tslibs.strptime.array_strptime
+  File "strptime.pyx", line 451, in pandas._libs.tslibs.strptime.array_strptime
+  File "strptime.pyx", line 583, in pandas._libs.tslibs.strptime._parse_with_format
+ValueError: time data "2015-11-06 04:24:01+00:00" doesn't match format "%Y-%m-%d %H:%M:%S.%f%z", at position 80. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-10-26 14:56:42,181 | INFO     | 
+[5/8] Running H4_spatial_resolution...
+2025-10-26 14:56:42,181 | INFO     | ======================================================================
+2025-10-26 14:56:42,181 | INFO     | H4: SPATIAL RESOLUTION
+2025-10-26 14:56:42,182 | INFO     | ======================================================================
+2025-10-26 14:56:42,182 | INFO     |   Resolution R = 5 km
+2025-10-26 14:56:48,562 | INFO     |     sigma_c(R=5) = 2.107
+2025-10-26 14:56:48,562 | INFO     |   Resolution R = 10 km
+2025-10-26 14:56:54,866 | INFO     |     sigma_c(R=10) = 3.714
+2025-10-26 14:56:54,866 | INFO     |   Resolution R = 20 km
+2025-10-26 14:57:01,110 | INFO     |     sigma_c(R=20) = 3.714
+2025-10-26 14:57:01,110 | INFO     |   Resolution R = 30 km
+2025-10-26 14:57:07,292 | INFO     |     sigma_c(R=30) = 4.036
+2025-10-26 14:57:07,303 | INFO     | CV = 0.222 [0.000, 0.314]
+2025-10-26 14:57:07,303 | INFO     | Mean sigma_c = 3.393 +/- 0.754
+2025-10-26 14:57:07,303 | INFO     | p(CV >= 0.3) = 0.0300
+2025-10-26 14:57:07,303 | INFO     | Status: PASSED
+2025-10-26 14:57:07,303 | INFO     | 
+[6/8] Running H5_magnitude_threshold...
+2025-10-26 14:57:07,304 | INFO     | ======================================================================
+2025-10-26 14:57:07,304 | INFO     | H5: MAGNITUDE THRESHOLD
+2025-10-26 14:57:07,304 | INFO     | ======================================================================
+2025-10-26 14:57:07,305 | INFO     |   Magnitude M >= 4.0: 488 events
+2025-10-26 14:57:07,394 | INFO     |     sigma_c(M>=4.0) = 1.464
+2025-10-26 14:57:07,394 | INFO     |   Magnitude M >= 4.5: 138 events
+2025-10-26 14:57:07,428 | INFO     |     sigma_c(M>=4.5) = 2.750
+2025-10-26 14:57:07,428 | INFO     |   Magnitude M >= 5.0: 39 events
+2025-10-26 14:57:07,428 | WARNING  |     Insufficient events for M >= 5.0
+2025-10-26 14:57:07,429 | INFO     |   Magnitude M >= 5.5: 15 events
+2025-10-26 14:57:07,429 | WARNING  |     Insufficient events for M >= 5.5
+2025-10-26 14:57:07,429 | INFO     |   Magnitude M >= 6.0: 6 events
+2025-10-26 14:57:07,429 | WARNING  |     Insufficient events for M >= 6.0
+2025-10-26 14:57:07,429 | WARNING  | Insufficient valid magnitude thresholds
+2025-10-26 14:57:07,429 | INFO     | 
+[7/8] Running H6_cross_validation...
+2025-10-26 14:57:07,430 | INFO     | ======================================================================
+2025-10-26 14:57:07,430 | INFO     | H6: CROSS-VALIDATION CONSISTENCY
+2025-10-26 14:57:07,430 | INFO     | ======================================================================
+2025-10-26 14:57:07,447 | INFO     |   Fold 1: 6973 training events
+2025-10-26 14:57:08,500 | INFO     |     sigma_c = 2.750
+2025-10-26 14:57:08,502 | INFO     |   Fold 2: 13944 training events
+2025-10-26 14:57:10,604 | INFO     |     sigma_c = 3.714
+2025-10-26 14:57:10,607 | INFO     |   Fold 3: 20915 training events
+2025-10-26 14:57:13,741 | INFO     |     sigma_c = 3.714
+2025-10-26 14:57:13,745 | INFO     |   Fold 4: 27886 training events
+2025-10-26 14:57:17,923 | INFO     |     sigma_c = 3.714
+2025-10-26 14:57:17,928 | INFO     |   Fold 5: 34857 training events
+2025-10-26 14:57:23,145 | INFO     |     sigma_c = 3.714
+2025-10-26 14:57:23,155 | INFO     | CV = 0.110 [0.000, 0.151]
+2025-10-26 14:57:23,155 | INFO     | Mean sigma_c = 3.521 +/- 0.386
+2025-10-26 14:57:23,155 | INFO     | Folds: 5
+2025-10-26 14:57:23,155 | INFO     | Status: PASSED
+2025-10-26 14:57:23,158 | INFO     | 
+[8/8] Saving results...
+2025-10-26 14:57:23,160 | INFO     | Results saved: out\seismic_validation_results.json
+2025-10-26 14:57:23,195 | INFO     | Manifest saved: out\manifest.csv
+2025-10-26 14:57:23,195 | INFO     | LaTeX table saved: out\results_table.tex
+2025-10-26 14:57:23,195 | INFO     | 
+Total runtime: 21.8 minutes

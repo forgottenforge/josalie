@@ -1,0 +1,106 @@
+2025-10-26 12:51:00,407 | INFO     | Log file: out\seismic_validation_20251026_125100.log
+2025-10-26 12:51:00,408 | INFO     | Initialized SigmaCSeismicValidator v1.0.0
+2025-10-26 12:51:00,408 | INFO     | Seed: 42, Fast mode: True
+2025-10-26 12:51:00,408 | INFO     | ======================================================================
+2025-10-26 12:51:00,408 | INFO     | STARTING SEISMIC SIGMA_C VALIDATION
+2025-10-26 12:51:00,408 | INFO     | ======================================================================
+2025-10-26 12:51:00,408 | INFO     | 
+[1/8] Fetching earthquake catalog...
+2025-10-26 12:51:00,409 | INFO     | Skip download mode - loading from cache
+2025-10-26 12:51:00,409 | INFO     | Loading cached catalog: cache\catalog_71b481ae.csv
+2025-10-26 12:51:00,529 | INFO     | 
+[2/8] Running H1_interior_peak...
+2025-10-26 12:51:00,529 | INFO     | ======================================================================
+2025-10-26 12:51:00,529 | INFO     | H1: INTERIOR PEAK DETECTION
+2025-10-26 12:51:00,529 | INFO     | ======================================================================
+2025-10-26 12:51:07,013 | INFO     |   Computing bootstrap CI (200 samples)...
+2025-10-26 13:12:19,519 | INFO     | sigma_c = 4.022 [3.043, 4.413]
+2025-10-26 13:12:19,519 | INFO     | kappa = 2.05
+2025-10-26 13:12:19,519 | INFO     | Interior: True, p = 1.0000
+2025-10-26 13:12:19,519 | INFO     | Status: PASSED
+2025-10-26 13:12:19,520 | INFO     | 
+[3/8] Running H2_sr_noise_enhancement...
+2025-10-26 13:12:19,520 | INFO     | ======================================================================
+2025-10-26 13:12:19,520 | INFO     | H2: SR-NOISE ENHANCEMENT
+2025-10-26 13:12:19,520 | INFO     | ======================================================================
+2025-10-26 13:12:25,949 | INFO     | Baseline AUC: 1.000 +/- 0.000
+2025-10-26 13:12:25,950 | INFO     | SR AUC: 1.000 +/- 0.000
+2025-10-26 13:12:25,950 | INFO     | Delta AUC: 0.000 [0.000, 0.000]
+2025-10-26 13:12:25,950 | INFO     | p = 1.0000
+2025-10-26 13:12:25,950 | INFO     | Status: FAILED
+2025-10-26 13:12:25,950 | INFO     | 
+[4/8] Running H3_temporal_scaling...
+2025-10-26 13:12:25,951 | INFO     | ======================================================================
+2025-10-26 13:12:25,951 | INFO     | H3: TEMPORAL SCALING
+2025-10-26 13:12:25,951 | INFO     | ======================================================================
+2025-10-26 13:12:25,951 | INFO     |   Window T = 30 days
+2025-10-26 13:12:25,953 | ERROR    | Error in H3_temporal_scaling: unsupported operand type(s) for -: 'str' and 'datetime.timedelta'
+Traceback (most recent call last):
+  File "d:\code\ver\sizemo\sigma_cize.py", line 1669, in run_validation
+    result = test_func()
+  File "d:\code\ver\sizemo\sigma_cize.py", line 808, in test_h3_temporal_scaling
+    stress_field = self.compute_stress_proxy(
+        self.catalog,
+        resolution_km=10.0,
+        time_window_days=T
+    )
+  File "d:\code\ver\sizemo\sigma_cize.py", line 335, in compute_stress_proxy
+    min_time = max_time - timedelta(days=time_window_days)
+               ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'str' and 'datetime.timedelta'
+2025-10-26 13:12:25,955 | INFO     | 
+[5/8] Running H4_spatial_resolution...
+2025-10-26 13:12:25,955 | INFO     | ======================================================================
+2025-10-26 13:12:25,955 | INFO     | H4: SPATIAL RESOLUTION
+2025-10-26 13:12:25,955 | INFO     | ======================================================================
+2025-10-26 13:12:25,955 | INFO     |   Resolution R = 5 km
+2025-10-26 13:12:32,377 | INFO     |     sigma_c(R=5) = 2.107
+2025-10-26 13:12:32,377 | INFO     |   Resolution R = 10 km
+2025-10-26 13:12:38,782 | INFO     |     sigma_c(R=10) = 3.714
+2025-10-26 13:12:38,782 | INFO     |   Resolution R = 20 km
+2025-10-26 13:12:45,109 | INFO     |     sigma_c(R=20) = 3.714
+2025-10-26 13:12:45,109 | INFO     |   Resolution R = 30 km
+2025-10-26 13:12:51,297 | INFO     |     sigma_c(R=30) = 4.036
+2025-10-26 13:12:51,308 | INFO     | CV = 0.222 [0.000, 0.314]
+2025-10-26 13:12:51,308 | INFO     | Mean sigma_c = 3.393 +/- 0.754
+2025-10-26 13:12:51,308 | INFO     | p(CV >= 0.3) = 0.0300
+2025-10-26 13:12:51,308 | INFO     | Status: PASSED
+2025-10-26 13:12:51,309 | INFO     | 
+[6/8] Running H5_magnitude_threshold...
+2025-10-26 13:12:51,309 | INFO     | ======================================================================
+2025-10-26 13:12:51,309 | INFO     | H5: MAGNITUDE THRESHOLD
+2025-10-26 13:12:51,309 | INFO     | ======================================================================
+2025-10-26 13:12:51,310 | INFO     |   Magnitude M >= 4.0: 488 events
+2025-10-26 13:12:51,404 | INFO     |     sigma_c(M>=4.0) = 1.464
+2025-10-26 13:12:51,405 | INFO     |   Magnitude M >= 4.5: 138 events
+2025-10-26 13:12:51,439 | INFO     |     sigma_c(M>=4.5) = 2.750
+2025-10-26 13:12:51,440 | INFO     |   Magnitude M >= 5.0: 39 events
+2025-10-26 13:12:51,440 | WARNING  |     Insufficient events for M >= 5.0
+2025-10-26 13:12:51,440 | INFO     |   Magnitude M >= 5.5: 15 events
+2025-10-26 13:12:51,440 | WARNING  |     Insufficient events for M >= 5.5
+2025-10-26 13:12:51,441 | INFO     |   Magnitude M >= 6.0: 6 events
+2025-10-26 13:12:51,441 | WARNING  |     Insufficient events for M >= 6.0
+2025-10-26 13:12:51,441 | WARNING  | Insufficient valid magnitude thresholds
+2025-10-26 13:12:51,441 | INFO     | 
+[7/8] Running H6_cross_validation...
+2025-10-26 13:12:51,441 | INFO     | ======================================================================
+2025-10-26 13:12:51,441 | INFO     | H6: CROSS-VALIDATION CONSISTENCY
+2025-10-26 13:12:51,442 | INFO     | ======================================================================
+2025-10-26 13:12:51,458 | INFO     |   Fold 1: 6973 training events
+2025-10-26 13:12:52,542 | INFO     |     sigma_c = 2.750
+2025-10-26 13:12:52,544 | INFO     |   Fold 2: 13944 training events
+2025-10-26 13:12:54,641 | INFO     |     sigma_c = 3.714
+2025-10-26 13:12:54,643 | INFO     |   Fold 3: 20915 training events
+2025-10-26 13:12:57,807 | INFO     |     sigma_c = 3.714
+2025-10-26 13:12:57,811 | INFO     |   Fold 4: 27886 training events
+2025-10-26 13:13:02,032 | INFO     |     sigma_c = 3.714
+2025-10-26 13:13:02,037 | INFO     |   Fold 5: 34857 training events
+2025-10-26 13:13:07,273 | INFO     |     sigma_c = 3.714
+2025-10-26 13:13:07,283 | INFO     | CV = 0.110 [0.000, 0.151]
+2025-10-26 13:13:07,284 | INFO     | Mean sigma_c = 3.521 +/- 0.386
+2025-10-26 13:13:07,284 | INFO     | Folds: 5
+2025-10-26 13:13:07,284 | INFO     | Status: PASSED
+2025-10-26 13:13:07,287 | INFO     | 
+[8/8] Saving results...
+2025-10-26 13:13:07,288 | INFO     | Results saved: out\seismic_validation_results.json
+2025-10-26 13:13:07,317 | INFO     | Manifest saved: out\manifest.csv

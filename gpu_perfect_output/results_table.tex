@@ -1,0 +1,20 @@
+\begin{table}[h]
+\centering
+\caption{GPU $\sigma_c$ Validation Results}
+\begin{tabular}{llll}
+\toprule
+\textbf{Experiment} & \textbf{Metric} & \textbf{Value} & \textbf{Status} \\
+\midrule
+E1: Interior Peak & $\sigma_c$ & $0.167 \pm 0.000$ & PASSED \\
+                  & $\kappa$ & 2.79 & \\
+\midrule
+E2: Memory & Slope & $-0.3529 \pm 0.5115$ & PASSED \\
+           & $R^2$ & 0.192 & \\
+\midrule
+E3: Depth & Correlation & 0.628 & PASSED \\
+          & Decreasing & True & \\
+\midrule
+E4: Precision & Reduction & 89.0\% & PASSED \\
+\bottomrule
+\end{tabular}
+\end{table}

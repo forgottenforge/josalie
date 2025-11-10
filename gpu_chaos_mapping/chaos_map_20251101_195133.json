@@ -1,0 +1,407 @@
+{
+  "device": "NVIDIA GeForce RTX 3060",
+  "timestamp": "2025-11-01T19:39:33.132100",
+  "parameter_space": [],
+  "chaos_map": [
+    {
+      "size": 512,
+      "thermal_state": "cool",
+      "memory_alpha": 0.5,
+      "sigma_c_median": 0.0,
+      "sigma_c_mad": 0.0,
+      "sigma_c_cv": 1.0,
+      "sigma_c_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.6000000000000001,
+        0.30000000000000004
+      ],
+      "stability": "CHAOTIC",
+      "chaos_metrics": {
+        "chaos_index": 0.1278375345543973,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0019102897552812925,
+        "perf_cv": 0.0928544362782415,
+        "predictability": 0.004008542801313946,
+        "chaos_level": "CHAOTIC"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 512,
+      "thermal_state": "cool",
+      "memory_alpha": 1.0,
+      "sigma_c_median": 0.2,
+      "sigma_c_mad": 0.2,
+      "sigma_c_cv": 1.0,
+      "sigma_c_values": [
+        1.0,
+        0.2,
+        0.5,
+        0.0,
+        0.0
+      ],
+      "stability": "CHAOTIC",
+      "chaos_metrics": {
+        "chaos_index": 0.13196093562172673,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0,
+        "perf_cv": 0.10653645207242242,
+        "predictability": 0.0,
+        "chaos_level": "CHAOTIC"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 512,
+      "thermal_state": "cool",
+      "memory_alpha": 1.5,
+      "sigma_c_median": 0.9,
+      "sigma_c_mad": 0.09999999999999998,
+      "sigma_c_cv": 0.11111111111111108,
+      "sigma_c_values": [
+        1.0,
+        1.0,
+        0.4,
+        0.9,
+        0.5
+      ],
+      "stability": "CHAOTIC",
+      "chaos_metrics": {
+        "chaos_index": 0.1357288314898495,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0,
+        "perf_cv": 0.11909610496616496,
+        "predictability": 0.0,
+        "chaos_level": "CHAOTIC"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 512,
+      "thermal_state": "normal",
+      "memory_alpha": 0.5,
+      "sigma_c_median": 1.0,
+      "sigma_c_mad": 0.0,
+      "sigma_c_cv": 0.0,
+      "sigma_c_values": [
+        1.0,
+        0.7000000000000001,
+        1.0,
+        1.0,
+        0.30000000000000004
+      ],
+      "stability": "STABLE",
+      "chaos_metrics": {
+        "chaos_index": 0.13206436917399197,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0,
+        "perf_cv": 0.10688123057997316,
+        "predictability": 0.0,
+        "chaos_level": "STABLE"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 512,
+      "thermal_state": "normal",
+      "memory_alpha": 1.0,
+      "sigma_c_median": 0.6000000000000001,
+      "sigma_c_mad": 0.30000000000000004,
+      "sigma_c_cv": 0.5,
+      "sigma_c_values": [
+        0.6000000000000001,
+        0.0,
+        0.7000000000000001,
+        0.30000000000000004,
+        1.0
+      ],
+      "stability": "CHAOTIC",
+      "chaos_metrics": {
+        "chaos_index": 0.11260929044793548,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0,
+        "perf_cv": 0.06190258185443999,
+        "predictability": 0.05961484108396527,
+        "chaos_level": "CHAOTIC"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 512,
+      "thermal_state": "normal",
+      "memory_alpha": 1.5,
+      "sigma_c_median": 0.6000000000000001,
+      "sigma_c_mad": 0.0,
+      "sigma_c_cv": 0.0,
+      "sigma_c_values": [
+        1.0,
+        0.6000000000000001,
+        0.6000000000000001,
+        0.6000000000000001,
+        0.0
+      ],
+      "stability": "STABLE",
+      "chaos_metrics": {
+        "chaos_index": 0.12443822763288837,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0,
+        "perf_cv": 0.08146075877629452,
+        "predictability": 0.0,
+        "chaos_level": "STABLE"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 512,
+      "thermal_state": "warm",
+      "memory_alpha": 0.5,
+      "sigma_c_median": 1.0,
+      "sigma_c_mad": 0.0,
+      "sigma_c_cv": 0.0,
+      "sigma_c_values": [
+        1.0,
+        1.0,
+        1.0,
+        0.6000000000000001,
+        0.0
+      ],
+      "stability": "STABLE",
+      "chaos_metrics": {
+        "chaos_index": 0.12821189001117372,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0,
+        "perf_cv": 0.09403963337057906,
+        "predictability": 0.0,
+        "chaos_level": "STABLE"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 512,
+      "thermal_state": "warm",
+      "memory_alpha": 1.0,
+      "sigma_c_median": 0.30000000000000004,
+      "sigma_c_mad": 0.30000000000000004,
+      "sigma_c_cv": 1.0,
+      "sigma_c_values": [
+        0.0,
+        1.0,
+        0.0,
+        0.30000000000000004,
+        0.7000000000000001
+      ],
+      "stability": "CHAOTIC",
+      "chaos_metrics": {
+        "chaos_index": 0.12765567861077717,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0,
+        "perf_cv": 0.09248697460324837,
+        "predictability": 0.0009041377019735371,
+        "chaos_level": "CHAOTIC"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 512,
+      "thermal_state": "warm",
+      "memory_alpha": 1.5,
+      "sigma_c_median": 0.30000000000000004,
+      "sigma_c_mad": 0.30000000000000004,
+      "sigma_c_cv": 1.0,
+      "sigma_c_values": [
+        0.0,
+        1.0,
+        0.30000000000000004,
+        1.0,
+        0.30000000000000004
+      ],
+      "stability": "CHAOTIC",
+      "chaos_metrics": {
+        "chaos_index": 0.1346802200894996,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0,
+        "perf_cv": 0.11560073363166526,
+        "predictability": 0.0,
+        "chaos_level": "CHAOTIC"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 1024,
+      "thermal_state": "cool",
+      "memory_alpha": 0.5,
+      "sigma_c_median": 0.4,
+      "sigma_c_mad": 0.20000000000000007,
+      "sigma_c_cv": 0.5000000000000001,
+      "sigma_c_values": [
+        0.4,
+        0.6000000000000001,
+        0.6000000000000001,
+        0.0,
+        0.30000000000000004
+      ],
+      "stability": "CHAOTIC",
+      "chaos_metrics": {
+        "chaos_index": 0.11257632704041678,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0,
+        "perf_cv": 0.041921090134722575,
+        "predictability": 0.0,
+        "chaos_level": "CHAOTIC"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 1024,
+      "thermal_state": "cool",
+      "memory_alpha": 1.0,
+      "sigma_c_median": 0.7000000000000001,
+      "sigma_c_mad": 0.29999999999999993,
+      "sigma_c_cv": 0.42857142857142844,
+      "sigma_c_values": [
+        0.4,
+        0.7000000000000001,
+        0.2,
+        1.0,
+        1.0
+      ],
+      "stability": "CHAOTIC",
+      "chaos_metrics": {
+        "chaos_index": 0.11406169206751642,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0,
+        "perf_cv": 0.05430213374038216,
+        "predictability": 0.02228948054598234,
+        "chaos_level": "CHAOTIC"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 1024,
+      "thermal_state": "cool",
+      "memory_alpha": 1.5,
+      "sigma_c_median": 0.30000000000000004,
+      "sigma_c_mad": 0.30000000000000004,
+      "sigma_c_cv": 1.0,
+      "sigma_c_values": [
+        1.0,
+        0.4,
+        0.30000000000000004,
+        0.0,
+        0.0
+      ],
+      "stability": "CHAOTIC",
+      "chaos_metrics": {
+        "chaos_index": 0.1097306352656759,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0,
+        "perf_cv": 0.03334875545819384,
+        "predictability": 0.0027399137178225454,
+        "chaos_level": "CHAOTIC"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 1024,
+      "thermal_state": "normal",
+      "memory_alpha": 0.5,
+      "sigma_c_median": 0.30000000000000004,
+      "sigma_c_mad": 0.30000000000000004,
+      "sigma_c_cv": 1.0,
+      "sigma_c_values": [
+        0.0,
+        0.30000000000000004,
+        1.0,
+        1.0,
+        0.2
+      ],
+      "stability": "CHAOTIC",
+      "chaos_metrics": {
+        "chaos_index": 0.10692415760102854,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0,
+        "perf_cv": 0.028598301837965284,
+        "predictability": 0.016553329503610527,
+        "chaos_level": "CHAOTIC"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 1024,
+      "thermal_state": "normal",
+      "memory_alpha": 1.0,
+      "sigma_c_median": 0.4,
+      "sigma_c_mad": 0.09999999999999998,
+      "sigma_c_cv": 0.24999999999999994,
+      "sigma_c_values": [
+        0.4,
+        0.0,
+        0.4,
+        0.5,
+        0.8
+      ],
+      "stability": "CHAOTIC",
+      "chaos_metrics": {
+        "chaos_index": 0.11270615595595083,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0019781318213567033,
+        "perf_cv": 0.04103509863893166,
+        "predictability": 0.0,
+        "chaos_level": "CHAOTIC"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 1024,
+      "thermal_state": "normal",
+      "memory_alpha": 1.5,
+      "sigma_c_median": 0.30000000000000004,
+      "sigma_c_mad": 0.09999999999999998,
+      "sigma_c_cv": 0.3333333333333332,
+      "sigma_c_values": [
+        0.7000000000000001,
+        0.4,
+        0.30000000000000004,
+        0.30000000000000004,
+        0.0
+      ],
+      "stability": "CHAOTIC",
+      "chaos_metrics": {
+        "chaos_index": 0.11308166430900099,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0019781318213567033,
+        "perf_cv": 0.0422867931490988,
+        "predictability": 0.0,
+        "chaos_level": "CHAOTIC"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 1024,
+      "thermal_state": "warm",
+      "memory_alpha": 0.5,
+      "sigma_c_median": 0.7000000000000001,
+      "sigma_c_mad": 0.09999999999999998,
+      "sigma_c_cv": 0.14285714285714282,
+      "sigma_c_values": [
+        0.6000000000000001,
+        0.30000000000000004,
+        0.9,
+        0.7000000000000001,
+        0.7000000000000001
+      ],
+      "stability": "CHAOTIC",
+      "chaos_metrics": {
+        "chaos_index": 0.10242293980905362,
+        "clock_cv": 0.0,
+        "temp_cv": 0.006387217020535749,
+        "perf_cv": 0.02096596125091969,
+        "predictability": 0.051442919703294385,
+        "chaos_level": "CHAOTIC"
+      },
+      "n_passes": 5
+    }
+  ]
+}

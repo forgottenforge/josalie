@@ -1,0 +1,57 @@
+{
+  "device": "NVIDIA GeForce RTX 3060",
+  "timestamp": "2025-11-01T19:39:33.132100",
+  "parameter_space": [],
+  "chaos_map": [
+    {
+      "size": 512,
+      "thermal_state": "cool",
+      "memory_alpha": 0.5,
+      "sigma_c_median": 0.0,
+      "sigma_c_mad": 0.0,
+      "sigma_c_cv": 1.0,
+      "sigma_c_values": [
+        0.0,
+        0.0,
+        0.0,
+        0.6000000000000001,
+        0.30000000000000004
+      ],
+      "stability": "CHAOTIC",
+      "chaos_metrics": {
+        "chaos_index": 0.1278375345543973,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0019102897552812925,
+        "perf_cv": 0.0928544362782415,
+        "predictability": 0.004008542801313946,
+        "chaos_level": "CHAOTIC"
+      },
+      "n_passes": 5
+    },
+    {
+      "size": 512,
+      "thermal_state": "cool",
+      "memory_alpha": 1.0,
+      "sigma_c_median": 0.2,
+      "sigma_c_mad": 0.2,
+      "sigma_c_cv": 1.0,
+      "sigma_c_values": [
+        1.0,
+        0.2,
+        0.5,
+        0.0,
+        0.0
+      ],
+      "stability": "CHAOTIC",
+      "chaos_metrics": {
+        "chaos_index": 0.13196093562172673,
+        "clock_cv": 0.0,
+        "temp_cv": 0.0,
+        "perf_cv": 0.10653645207242242,
+        "predictability": 0.0,
+        "chaos_level": "CHAOTIC"
+      },
+      "n_passes": 5
+    }
+  ]
+}

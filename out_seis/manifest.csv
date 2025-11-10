@@ -1,0 +1,24 @@
+File,Size (bytes),SHA256 (first 8)
+h1_interior_peak.pdf,35929,bcc8080d
+h2_sr_enhancement.pdf,34532,3d3a05d3
+h3_temporal_scaling.pdf,34268,35112f5c
+h4_spatial_resolution.pdf,29049,5420ba0f
+h5_magnitude_threshold.pdf,31010,83f9ea5a
+h6_cross_validation.pdf,31349,a77a4b36
+manifest.csv,842,7706ec88
+results_table.tex,624,baab874a
+seismic_validation_20251025_221044.log,5302,c9657a57
+seismic_validation_20251025_231153.log,1057,cd21bd92
+seismic_validation_20251026_095313.log,1057,b55a7ccd
+seismic_validation_20251026_100553.log,1131,c5e20d78
+seismic_validation_20251026_115010.log,1131,302d8c5c
+seismic_validation_20251026_115232.log,8544,df702a7e
+seismic_validation_20251026_125100.log,6995,5e9086e9
+seismic_validation_20251026_140205.log,8134,3b4cffb3
+seismic_validation_20251026_143536.log,8875,60eed11b
+seismic_validation_20251026_155449.log,1050,9603c66a
+seismic_validation_20251026_155502.log,7267,bdab1d15
+seismic_validation_20251026_163730.log,8547,a783590c
+seismic_validation_20251026_165244.log,7249,f9bfd7b1
+seismic_validation_20251026_175500.log,7407,e4834b53
+seismic_validation_results.json,9246,3d11b3e4
