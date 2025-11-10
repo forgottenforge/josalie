@@ -1,0 +1,19 @@
+2025-11-06 21:18:49,249 - INFO - ======================================================================
+2025-11-06 21:18:49,249 - INFO - ERA5 CLIMATE SIGMA_C VALIDATION
+2025-11-06 21:18:49,249 - INFO - ======================================================================
+2025-11-06 21:18:49,249 - INFO - Step 1: Fetching ERA5 data...
+2025-11-06 21:18:49,250 - INFO - ======================================================================
+2025-11-06 21:18:49,250 - INFO - DOWNLOADING REAL ERA5 DATA FROM COPERNICUS CDS
+2025-11-06 21:18:49,250 - INFO - ======================================================================
+2025-11-06 21:18:49,250 - INFO - Downloading ERA5 data from CDS...
+2025-11-06 21:18:49,250 - INFO - This may take 10-30 minutes for first download...
+2025-11-06 21:18:49,338 - INFO - Found .cdsapirc at: .cdsapirc
+2025-11-06 21:18:49,347 - INFO - Copied .cdsapirc to standard location: C:\Users\WurmMKG\.cdsapirc
+2025-11-06 21:18:49,560 - INFO -   Year 2015: Downloading from CDS... (this may take 5-10 min)
+2025-11-06 21:18:49,842 - ERROR -   Year 2015: Download failed: 403 Client Error: Forbidden for url: https://cds.climate.copernicus.eu/api/retrieve/v1/processes/reanalysis-era5-single-levels/execution
+required licences not accepted
+Not all the required licences have been accepted; please visit https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=download#manage-licences to accept the required licence(s).
+2025-11-06 21:18:49,842 - ERROR -   Common issues:
+2025-11-06 21:18:49,843 - ERROR -   - Check API key in ~/.cdsapirc
+2025-11-06 21:18:49,843 - ERROR -   - Accept terms at https://cds.climate.copernicus.eu
+2025-11-06 21:18:49,843 - ERROR -   - CDS might be overloaded, try again later

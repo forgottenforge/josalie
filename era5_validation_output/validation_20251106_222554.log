@@ -1,0 +1,24 @@
+2025-11-06 22:25:54,605 - INFO - ======================================================================
+2025-11-06 22:25:54,605 - INFO - ERA5 CLIMATE SIGMA_C VALIDATION
+2025-11-06 22:25:54,605 - INFO - ======================================================================
+2025-11-06 22:25:54,605 - INFO - Step 1: Fetching ERA5 data...
+2025-11-06 22:25:54,606 - INFO - Loading cached data from era5_cache\era5_temperature_europe.parquet
+2025-11-06 22:25:54,606 - INFO - (Delete cache file or set force_download=True for fresh ERA5 data)
+2025-11-06 22:25:55,486 - INFO - Loaded 26195663 data points
+2025-11-06 22:25:55,486 - INFO - 
+Running E1_sigma_c_detection...
+2025-11-06 22:25:55,486 - INFO - E1: Basic sigma_c detection with full dataset
+2025-11-06 22:25:57,151 - INFO - Downsampled from 26195663 to 50000 points for speed
+2025-11-06 22:25:57,152 - INFO - Processing 50 sigma values with 50000 data points...
+2025-11-06 22:25:57,152 - INFO -   Progress: 1/50 - sigma = 1.0 km
+2025-11-06 22:28:29,236 - INFO -   Progress: 6/50 - sigma = 2.6 km - ETA: 22.8 min
+2025-11-06 22:31:01,038 - INFO -   Progress: 11/50 - sigma = 6.6 km - ETA: 20.3 min
+2025-11-06 22:33:32,279 - INFO -   Progress: 16/50 - sigma = 16.8 km - ETA: 17.7 min
+2025-11-06 22:35:57,825 - INFO -   Progress: 21/50 - sigma = 42.9 km - ETA: 15.0 min
+2025-11-06 22:38:01,632 - INFO -   Progress: 26/50 - sigma = 109.9 km - ETA: 12.1 min
+2025-11-06 22:39:32,785 - INFO -   Progress: 31/50 - sigma = 281.2 km - ETA: 9.1 min
+2025-11-06 22:41:01,261 - INFO -   Progress: 36/50 - sigma = 719.7 km - ETA: 6.5 min
+2025-11-06 22:42:28,146 - INFO -   Progress: 41/50 - sigma = 1842.1 km - ETA: 4.1 min
+2025-11-06 22:43:51,683 - INFO -   Progress: 46/50 - sigma = 4714.9 km - ETA: 2.0 min
+2025-11-06 22:45:14,405 - INFO - Sigma sweep completed in 19.3 minutes
+2025-11-06 22:45:14,406 - INFO - Computing susceptibility and bootstrap CI...

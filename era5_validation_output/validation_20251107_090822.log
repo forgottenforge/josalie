@@ -1,0 +1,56 @@
+2025-11-07 09:08:22,587 - INFO - ======================================================================
+2025-11-07 09:08:22,587 - INFO - ERA5 CLIMATE SIGMA_C VALIDATION
+2025-11-07 09:08:22,587 - INFO - ======================================================================
+2025-11-07 09:08:22,588 - INFO - Step 1: Fetching ERA5 data...
+2025-11-07 09:08:22,588 - INFO - Loading cached data from era5_cache\era5_temperature_europe.parquet
+2025-11-07 09:08:22,588 - INFO - (Delete cache file or set force_download=True for fresh ERA5 data)
+2025-11-07 09:08:23,591 - INFO - Loaded 26195663 data points
+2025-11-07 09:08:23,591 - INFO - 
+Running E1_sigma_c_detection...
+2025-11-07 09:08:23,592 - INFO - E1: Basic sigma_c detection with full dataset
+2025-11-07 09:08:25,159 - INFO - Downsampled from 26195663 to 50000 points for speed
+2025-11-07 09:08:25,159 - INFO - Processing 50 sigma values with 50000 data points...
+2025-11-07 09:08:25,159 - INFO -   Progress: 1/50 - sigma = 1.0 km
+2025-11-07 09:10:56,706 - INFO -   Progress: 6/50 - sigma = 2.6 km - ETA: 22.7 min
+2025-11-07 09:13:28,021 - INFO -   Progress: 11/50 - sigma = 6.6 km - ETA: 20.2 min
+2025-11-07 09:15:59,736 - INFO -   Progress: 16/50 - sigma = 16.8 km - ETA: 17.7 min
+2025-11-07 09:18:25,668 - INFO -   Progress: 21/50 - sigma = 42.9 km - ETA: 15.0 min
+2025-11-07 09:20:30,418 - INFO -   Progress: 26/50 - sigma = 109.9 km - ETA: 12.1 min
+2025-11-07 09:22:02,453 - INFO -   Progress: 31/50 - sigma = 281.2 km - ETA: 9.1 min
+2025-11-07 09:23:30,393 - INFO -   Progress: 36/50 - sigma = 719.7 km - ETA: 6.5 min
+2025-11-07 09:24:56,560 - INFO -   Progress: 41/50 - sigma = 1842.1 km - ETA: 4.1 min
+2025-11-07 09:26:20,151 - INFO -   Progress: 46/50 - sigma = 4714.9 km - ETA: 2.0 min
+2025-11-07 09:27:43,596 - INFO - Sigma sweep completed in 19.3 minutes
+2025-11-07 09:27:43,597 - INFO - Computing susceptibility and bootstrap CI...
+2025-11-07 09:27:43,597 - INFO - Bootstrap CI with 1000 resamples...
+2025-11-07 09:27:43,615 - INFO -   Bootstrap progress: 100/1000
+2025-11-07 09:27:43,632 - INFO -   Bootstrap progress: 200/1000
+2025-11-07 09:27:43,649 - INFO -   Bootstrap progress: 300/1000
+2025-11-07 09:27:43,666 - INFO -   Bootstrap progress: 400/1000
+2025-11-07 09:27:43,683 - INFO -   Bootstrap progress: 500/1000
+2025-11-07 09:27:43,700 - INFO -   Bootstrap progress: 600/1000
+2025-11-07 09:27:43,717 - INFO -   Bootstrap progress: 700/1000
+2025-11-07 09:27:43,733 - INFO -   Bootstrap progress: 800/1000
+2025-11-07 09:27:43,751 - INFO -   Bootstrap progress: 900/1000
+2025-11-07 09:27:43,770 - INFO - ✓ E1_sigma_c_detection completed
+2025-11-07 09:27:43,770 - INFO - 
+Running E2_spatial_smoothing_sweep...
+2025-11-07 09:27:43,770 - INFO - E2: Comprehensive smoothing analysis
+2025-11-07 09:27:45,510 - INFO - Downsampled to 20000 points for E2 speed
+2025-11-07 09:27:45,510 - INFO -   Processing sigma = 1.0 km (1/50)
+2025-11-07 09:28:46,207 - INFO -   Processing sigma = 2.6 km (6/50) - ETA: 9.1 min
+2025-11-07 09:29:47,257 - INFO -   Processing sigma = 6.6 km (11/50) - ETA: 8.1 min
+2025-11-07 09:30:47,183 - INFO -   Processing sigma = 16.8 km (16/50) - ETA: 7.1 min
+2025-11-07 09:31:46,891 - INFO -   Processing sigma = 42.9 km (21/50) - ETA: 6.0 min
+2025-11-07 09:32:37,722 - INFO -   Processing sigma = 109.9 km (26/50) - ETA: 4.9 min
+2025-11-07 09:33:14,038 - INFO -   Processing sigma = 281.2 km (31/50) - ETA: 3.7 min
+2025-11-07 09:33:49,277 - INFO -   Processing sigma = 719.7 km (36/50) - ETA: 2.6 min
+2025-11-07 09:34:23,741 - INFO -   Processing sigma = 1842.1 km (41/50) - ETA: 1.7 min
+2025-11-07 09:34:57,430 - INFO -   Processing sigma = 4714.9 km (46/50) - ETA: 0.8 min
+2025-11-07 09:35:31,041 - INFO - E2 completed in 7.8 minutes
+2025-11-07 09:35:31,042 - INFO - ✓ E2_spatial_smoothing_sweep completed
+2025-11-07 09:35:31,042 - INFO - 
+Running E3_temporal_scaling...
+2025-11-07 09:35:31,043 - INFO - E3: Temporal scaling analysis
+2025-11-07 09:35:33,058 - INFO -   Analyzing T = 1 years
+2025-11-07 19:36:28,001 - INFO -   Analyzing T = 2 years

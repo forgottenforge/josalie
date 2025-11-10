@@ -1,0 +1,78 @@
+2025-11-07 21:11:56,360 - INFO - ======================================================================
+2025-11-07 21:11:56,360 - INFO - ERA5 CLIMATE SIGMA_C VALIDATION v2.0
+2025-11-07 21:11:56,360 - INFO - ======================================================================
+2025-11-07 21:11:56,360 - INFO - Starting validation (seed: 42)
+2025-11-07 21:11:56,360 - INFO - 
+Loading ERA5 data...
+2025-11-07 21:11:56,361 - INFO - Loading cached climate data...
+2025-11-07 21:11:57,335 - INFO - Loaded 26,195,663 data points
+2025-11-07 21:11:57,539 - INFO - Date range: 2015-01-01 00:00:00 to 2024-12-31 00:00:00
+2025-11-07 21:11:57,539 - INFO - 
+============================================================
+2025-11-07 21:11:57,540 - INFO - H1: INTERIOR PEAK DETECTION
+2025-11-07 21:11:57,540 - INFO - ============================================================
+2025-11-07 21:11:57,755 - INFO - Testing scales: 50 - 5000 km
+2025-11-07 21:11:57,755 - INFO - Points: 40
+2025-11-07 21:11:57,755 - INFO - Computing spatial variance at each scale...
+2025-11-07 21:12:09,005 - INFO -   Scale 145 km: variance = 23.558247
+2025-11-07 21:12:20,388 - INFO -   Scale 471 km: variance = 18.001200
+2025-11-07 21:12:31,237 - INFO -   Scale 1535 km: variance = 4.254971
+2025-11-07 21:12:42,107 - INFO -   Scale 5000 km: variance = 0.000002
+2025-11-07 21:12:42,108 - INFO - Bootstrap confidence intervals (500 iterations)...
+2025-11-07 21:12:42,214 - INFO - Permutation test...
+2025-11-07 21:12:42,238 - INFO -   sigma_c = 163 km (95% CI: [102, 331])
+2025-11-07 21:12:42,238 - INFO -   kappa = 2.16
+2025-11-07 21:12:42,238 - INFO -   p-value = 1.0000
+2025-11-07 21:12:42,239 - INFO -   Physical interpretation: Sub-synoptic (regional systems)
+2025-11-07 21:12:42,239 - INFO -   Status: FAILED
+2025-11-07 21:12:42,321 - INFO - 
+============================================================
+2025-11-07 21:12:42,322 - INFO - H2: TEMPORAL SCALING
+2025-11-07 21:12:42,322 - INFO - ============================================================
+2025-11-07 21:12:44,127 - INFO - Computing sigma_c for different time windows...
+2025-11-07 21:12:45,403 - INFO -   2 years: sigma_c = 165 km
+2025-11-07 21:12:47,052 - INFO -   4 years: sigma_c = 165 km
+2025-11-07 21:12:49,109 - INFO -   6 years: sigma_c = 165 km
+2025-11-07 21:12:51,604 - INFO -   8 years: sigma_c = 165 km
+2025-11-07 21:12:54,535 - INFO -   10 years: sigma_c = 165 km
+2025-11-07 21:12:54,539 - INFO -   Scaling exponent: 0.000
+2025-11-07 21:12:54,539 - INFO -   Kendall tau: nan (p=nan)
+2025-11-07 21:12:54,540 - INFO -   Status: MARGINAL
+2025-11-07 21:12:54,640 - INFO - 
+============================================================
+2025-11-07 21:12:54,641 - INFO - H3: SPATIAL RESOLUTION ROBUSTNESS
+2025-11-07 21:12:54,641 - INFO - ============================================================
+2025-11-07 21:12:54,641 - INFO - Computing sigma_c for different sample sizes...
+2025-11-07 21:12:56,518 - INFO -   n=10000: sigma_c = 165 km
+2025-11-07 21:12:58,493 - INFO -   n=15000: sigma_c = 165 km
+2025-11-07 21:13:00,460 - INFO -   n=20000: sigma_c = 165 km
+2025-11-07 21:13:02,454 - INFO -   n=30000: sigma_c = 165 km
+2025-11-07 21:13:02,455 - INFO -   Mean: 165 +/- 0 km
+2025-11-07 21:13:02,455 - INFO -   CV: 0.000
+2025-11-07 21:13:02,455 - INFO -   Status: PASSED
+2025-11-07 21:13:02,456 - INFO - 
+============================================================
+2025-11-07 21:13:02,456 - INFO - H4: CROSS-VALIDATION
+2025-11-07 21:13:02,456 - INFO - ============================================================
+2025-11-07 21:13:04,284 - INFO - Running 3-fold cross-validation...
+2025-11-07 21:13:05,395 - INFO -   Fold 1: sigma_c = 165 km
+2025-11-07 21:13:06,530 - INFO -   Fold 2: sigma_c = 165 km
+2025-11-07 21:13:07,640 - INFO -   Fold 3: sigma_c = 165 km
+2025-11-07 21:13:07,641 - INFO -   Mean: 165 +/- 0 km
+2025-11-07 21:13:07,641 - INFO -   CV: 0.000
+2025-11-07 21:13:07,641 - INFO -   Status: PASSED
+2025-11-07 21:13:07,737 - INFO - 
+============================================================
+2025-11-07 21:13:07,738 - INFO - GENERATING VISUALIZATIONS
+2025-11-07 21:13:07,738 - INFO - ============================================================
+2025-11-07 21:13:08,406 - INFO -   [SAVED] era5_validation_output\main_analysis_CORRECTED.pdf
+2025-11-07 21:13:08,914 - INFO -   [SAVED] era5_validation_output\h1_detailed_CORRECTED.pdf
+2025-11-07 21:13:09,032 - INFO -   [SAVED] era5_validation_output\summary_report_CORRECTED.pdf
+2025-11-07 21:13:09,034 - INFO -   [SAVED] Results: era5_validation_output\results_20251107_211309.json
+2025-11-07 21:13:09,034 - INFO - 
+======================================================================
+2025-11-07 21:13:09,034 - INFO - VALIDATION COMPLETE
+2025-11-07 21:13:09,034 - INFO - ======================================================================
+2025-11-07 21:13:09,034 - INFO - Tests passed/marginal: 3/4
+2025-11-07 21:13:09,034 - INFO - Runtime: 1.2 minutes
+2025-11-07 21:13:09,034 - INFO - Output: era5_validation_output

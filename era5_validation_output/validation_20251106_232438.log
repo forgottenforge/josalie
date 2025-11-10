@@ -1,0 +1,39 @@
+2025-11-06 23:24:38,871 - INFO - ======================================================================
+2025-11-06 23:24:38,872 - INFO - ERA5 CLIMATE SIGMA_C VALIDATION
+2025-11-06 23:24:38,872 - INFO - ======================================================================
+2025-11-06 23:24:38,872 - INFO - Step 1: Fetching ERA5 data...
+2025-11-06 23:24:38,872 - INFO - Loading cached data from era5_cache\era5_temperature_europe.parquet
+2025-11-06 23:24:38,872 - INFO - (Delete cache file or set force_download=True for fresh ERA5 data)
+2025-11-06 23:24:39,718 - INFO - Loaded 26195663 data points
+2025-11-06 23:24:39,718 - INFO - 
+Running E1_sigma_c_detection...
+2025-11-06 23:24:39,718 - INFO - E1: Basic sigma_c detection with full dataset
+2025-11-06 23:24:41,069 - INFO - Downsampled from 26195663 to 50000 points for speed
+2025-11-06 23:24:41,069 - INFO - Processing 50 sigma values with 50000 data points...
+2025-11-06 23:24:41,069 - INFO -   Progress: 1/50 - sigma = 1.0 km
+2025-11-06 23:27:16,557 - INFO -   Progress: 6/50 - sigma = 2.6 km - ETA: 23.3 min
+2025-11-06 23:29:52,636 - INFO -   Progress: 11/50 - sigma = 6.6 km - ETA: 20.8 min
+2025-11-06 23:32:26,757 - INFO -   Progress: 16/50 - sigma = 16.8 km - ETA: 18.1 min
+2025-11-06 23:34:55,305 - INFO -   Progress: 21/50 - sigma = 42.9 km - ETA: 15.4 min
+2025-11-06 23:37:02,163 - INFO -   Progress: 26/50 - sigma = 109.9 km - ETA: 12.4 min
+2025-11-06 23:38:33,611 - INFO -   Progress: 31/50 - sigma = 281.2 km - ETA: 9.3 min
+2025-11-06 23:40:01,093 - INFO -   Progress: 36/50 - sigma = 719.7 km - ETA: 6.6 min
+2025-11-06 23:41:27,188 - INFO -   Progress: 41/50 - sigma = 1842.1 km - ETA: 4.2 min
+2025-11-06 23:42:51,271 - INFO -   Progress: 46/50 - sigma = 4714.9 km - ETA: 2.0 min
+2025-11-06 23:44:14,873 - INFO - Sigma sweep completed in 19.6 minutes
+2025-11-06 23:44:14,873 - INFO - Computing susceptibility and bootstrap CI...
+2025-11-06 23:44:14,874 - INFO - Bootstrap CI with 1000 resamples...
+2025-11-06 23:44:14,891 - INFO -   Bootstrap progress: 100/1000
+2025-11-06 23:44:14,909 - INFO -   Bootstrap progress: 200/1000
+2025-11-06 23:44:14,926 - INFO -   Bootstrap progress: 300/1000
+2025-11-06 23:44:14,944 - INFO -   Bootstrap progress: 400/1000
+2025-11-06 23:44:14,961 - INFO -   Bootstrap progress: 500/1000
+2025-11-06 23:44:14,979 - INFO -   Bootstrap progress: 600/1000
+2025-11-06 23:44:14,996 - INFO -   Bootstrap progress: 700/1000
+2025-11-06 23:44:15,013 - INFO -   Bootstrap progress: 800/1000
+2025-11-06 23:44:15,031 - INFO -   Bootstrap progress: 900/1000
+2025-11-06 23:44:15,049 - INFO - ✓ E1_sigma_c_detection completed
+2025-11-06 23:44:15,049 - INFO - 
+Running E2_spatial_smoothing_sweep...
+2025-11-06 23:44:15,049 - INFO - E2: Comprehensive smoothing analysis
+2025-11-06 23:44:15,304 - INFO -   Processing sigma = 1.0 km (1/80)

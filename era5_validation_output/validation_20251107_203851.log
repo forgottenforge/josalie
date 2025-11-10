@@ -1,0 +1,69 @@
+2025-11-07 20:38:51,120 - INFO - ======================================================================
+2025-11-07 20:38:51,120 - INFO - ERA5 CLIMATE SIGMA_C VALIDATION
+2025-11-07 20:38:51,120 - INFO - ======================================================================
+2025-11-07 20:38:51,120 - INFO - Step 1: Fetching ERA5 data...
+2025-11-07 20:38:51,121 - INFO - Loading cached data from era5_cache\era5_temperature_europe.parquet
+2025-11-07 20:38:51,121 - INFO - (Delete cache file or set force_download=True for fresh ERA5 data)
+2025-11-07 20:38:52,048 - INFO - Loaded 26195663 data points
+2025-11-07 20:38:52,048 - INFO - 
+Running E1_sigma_c_detection...
+2025-11-07 20:38:52,048 - INFO - E1: Basic sigma_c detection with full dataset
+2025-11-07 20:38:53,558 - INFO - Downsampled from 26195663 to 30000 points for speed
+2025-11-07 20:38:53,559 - INFO - Processing 40 sigma values with 30000 data points...
+2025-11-07 20:38:53,559 - INFO -   Progress: 1/40 - sigma = 1.0 km
+2025-11-07 20:38:53,607 - INFO -   Progress: 5/40 - sigma = 2.6 km - ETA: 0.0 min
+2025-11-07 20:38:53,681 - INFO -   Progress: 9/40 - sigma = 6.6 km - ETA: 0.0 min
+2025-11-07 20:38:53,852 - INFO -   Progress: 13/40 - sigma = 17.0 km - ETA: 0.0 min
+2025-11-07 20:38:54,076 - INFO -   Progress: 17/40 - sigma = 43.8 km - ETA: 0.0 min
+2025-11-07 20:38:54,469 - INFO -   Progress: 21/40 - sigma = 112.5 km - ETA: 0.0 min
+2025-11-07 20:38:55,258 - INFO -   Progress: 25/40 - sigma = 289.4 km - ETA: 0.0 min
+2025-11-07 20:38:58,963 - INFO -   Progress: 29/40 - sigma = 744.4 km - ETA: 0.0 min
+2025-11-07 20:39:12,432 - INFO -   Progress: 33/40 - sigma = 1914.5 km - ETA: 0.1 min
+2025-11-07 20:39:31,954 - INFO -   Progress: 37/40 - sigma = 4923.9 km - ETA: 0.1 min
+2025-11-07 20:39:51,397 - INFO - Sigma sweep completed in 1.0 minutes
+2025-11-07 20:39:51,397 - INFO - Computing susceptibility and bootstrap CI...
+2025-11-07 20:39:51,398 - INFO - Bootstrap CI with 500 resamples...
+2025-11-07 20:39:51,415 - INFO -   Bootstrap progress: 100/500
+2025-11-07 20:39:51,432 - INFO -   Bootstrap progress: 200/500
+2025-11-07 20:39:51,449 - INFO -   Bootstrap progress: 300/500
+2025-11-07 20:39:51,466 - INFO -   Bootstrap progress: 400/500
+2025-11-07 20:39:51,483 - INFO - ✓ E1_sigma_c_detection completed
+2025-11-07 20:39:51,483 - INFO - 
+Running E2_spatial_smoothing_sweep...
+2025-11-07 20:39:51,484 - INFO - E2: Comprehensive smoothing analysis
+2025-11-07 20:39:52,942 - INFO - Downsampled to 15000 points for E2 speed
+2025-11-07 20:39:52,942 - INFO -   sigma = 1.0 km (1/35)
+2025-11-07 20:39:52,984 - INFO -   sigma = 3.9 km (6/35) - ETA: 0.0 min
+2025-11-07 20:39:53,122 - INFO -   sigma = 15.0 km (11/35) - ETA: 0.0 min
+2025-11-07 20:39:53,350 - INFO -   sigma = 58.2 km (16/35) - ETA: 0.0 min
+2025-11-07 20:39:53,725 - INFO -   sigma = 225.4 km (21/35) - ETA: 0.0 min
+2025-11-07 20:39:56,078 - INFO -   sigma = 873.3 km (26/35) - ETA: 0.0 min
+2025-11-07 20:40:06,562 - INFO -   sigma = 3383.9 km (31/35) - ETA: 0.0 min
+2025-11-07 20:40:18,726 - INFO - E2 completed in 0.4 minutes
+2025-11-07 20:40:18,727 - INFO - ✓ E2_spatial_smoothing_sweep completed
+2025-11-07 20:40:18,727 - INFO - 
+Running E3_temporal_scaling...
+2025-11-07 20:40:18,727 - INFO - E3: Temporal scaling analysis
+2025-11-07 20:40:20,707 - INFO -   Analyzing T = 2 years
+2025-11-07 20:40:31,172 - INFO -   Analyzing T = 4 years
+2025-11-07 20:40:41,931 - INFO -   Analyzing T = 7 years
+2025-11-07 20:40:53,331 - INFO -   Analyzing T = 10 years
+2025-11-07 20:41:05,558 - INFO - ✓ E3_temporal_scaling completed
+2025-11-07 20:41:05,558 - INFO - 
+Running E4_spatial_resolution...
+2025-11-07 20:41:05,558 - INFO - E4: Spatial resolution robustness
+2025-11-07 20:41:07,025 - INFO -   Testing resolution 25 km
+2025-11-07 20:41:16,995 - INFO -   Testing resolution 50 km
+2025-11-07 20:41:26,986 - INFO -   Testing resolution 100 km
+2025-11-07 20:41:36,937 - INFO - ✓ E4_spatial_resolution completed
+2025-11-07 20:41:36,938 - INFO - 
+Running E5_cross_validation...
+2025-11-07 20:41:36,938 - INFO - E5: Cross-validation
+2025-11-07 20:41:38,860 - INFO -   Processing fold 1/3
+2025-11-07 20:41:49,271 - INFO -   Processing fold 2/3
+2025-11-07 20:41:59,534 - INFO -   Processing fold 3/3
+2025-11-07 20:42:09,838 - INFO - ✓ E5_cross_validation completed
+2025-11-07 20:42:09,838 - INFO - 
+Generating visualizations...
+2025-11-07 20:42:09,838 - INFO - Creating figures...
+2025-11-07 20:42:10,939 - INFO - Saved era5_validation_output\figure_e1_sigma_c_detection.pdf

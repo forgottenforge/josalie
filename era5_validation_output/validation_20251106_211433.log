@@ -1,0 +1,9 @@
+2025-11-06 21:14:33,779 - INFO - ======================================================================
+2025-11-06 21:14:33,779 - INFO - ERA5 CLIMATE SIGMA_C VALIDATION
+2025-11-06 21:14:33,779 - INFO - ======================================================================
+2025-11-06 21:14:33,779 - INFO - Step 1: Fetching ERA5 data...
+2025-11-06 21:14:33,779 - INFO - Loading cached data from era5_cache\era5_temperature_europe.parquet
+2025-11-06 21:14:33,815 - INFO - Loaded 610000 data points
+2025-11-06 21:14:33,815 - INFO - 
+Running E1_sigma_c_detection...
+2025-11-06 21:14:33,815 - INFO - E1: Basic sigma_c detection with full dataset

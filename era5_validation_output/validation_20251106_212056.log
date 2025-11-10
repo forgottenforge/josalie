@@ -1,0 +1,18 @@
+2025-11-06 21:20:56,319 - INFO - ======================================================================
+2025-11-06 21:20:56,319 - INFO - ERA5 CLIMATE SIGMA_C VALIDATION
+2025-11-06 21:20:56,320 - INFO - ======================================================================
+2025-11-06 21:20:56,320 - INFO - Step 1: Fetching ERA5 data...
+2025-11-06 21:20:56,320 - INFO - ======================================================================
+2025-11-06 21:20:56,320 - INFO - DOWNLOADING REAL ERA5 DATA FROM COPERNICUS CDS
+2025-11-06 21:20:56,320 - INFO - ======================================================================
+2025-11-06 21:20:56,320 - INFO - Downloading ERA5 data from CDS...
+2025-11-06 21:20:56,321 - INFO - This may take 10-30 minutes for first download...
+2025-11-06 21:20:56,407 - INFO - Found .cdsapirc at: C:\Users\WurmMKG\.cdsapirc
+2025-11-06 21:20:56,585 - INFO -   Year 2015: Downloading from CDS... (this may take 5-10 min)
+2025-11-06 21:20:57,024 - INFO - Request ID is 1e98d6bb-daaf-4134-a3ac-3171429c3e2c
+2025-11-06 21:20:57,081 - INFO - status has been updated to accepted
+2025-11-06 21:21:05,461 - INFO - status has been updated to running
+2025-11-06 21:22:50,974 - INFO - status has been updated to successful
+2025-11-06 21:22:51,092 - INFO - Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-3/2025-11-06/8a926966ad034c8a26b05e268c6fe290.nc
+2025-11-06 21:22:59,631 - INFO -   Year 2015: Download complete!
+2025-11-06 21:22:59,631 - INFO -   Year 2015: Processing NetCDF...
