@@ -1,0 +1,21 @@
+\begin{table}[h]
+\centering
+\caption{GPU σc Validation Results (NVIDIA GeForce RTX 3060)}
+\begin{tabular}{llll}
+\toprule
+Experiment & Metric & Value & Status \\
+\midrule
+E1: Interior Peak & $\sigma_c$ & 0.333 & PASSED \\
+                  & $\kappa$ & 4.32 & \\
+\midrule
+E2: Memory Overhead & Slope & 0.6857 & PASSED \\
+                    & $R^2$ & 0.600 & \\
+\midrule
+E3: Depth Scaling & Correlation & 0.306 & FAILED \\
+                  & $\sigma_c$ values & [0.1142857142857143, 0.1142857142857143, 0.5714285714285715, 0.2285714285714286] & \\
+\midrule
+E4: Precision & $\kappa_{\text{aligned}}$ & 14.60 & PASSED \\
+              & Reduction & 73.5\% & \\
+\bottomrule
+\end{tabular}
+\end{table}
