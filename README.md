@@ -7,6 +7,44 @@
 
 This repository contains all code, data, documentation, and resources associated with the paper "A Susceptibility-Based Methodology for Characteristic Scale Identification: Preliminary Validation Across Five Complex Systems" by ForgottenForge.
 
+## 🎓 Theoretical Background
+
+The susceptibility χ(σ) quantifies system response to scale changes:
+
+```
+χ(σ) = |∂O/∂σ|
+```
+
+where:
+- O: Observable quantity (energy, performance, variance, etc.)
+- σ: Scale parameter (distance, time, noise level, etc.)
+- σ_c: Critical scale where χ peaks
+
+Key insight: **Gradient-based observables outperform absolute measures by up to 28×**
+
+## 💻 Example Usage
+
+```python
+import numpy as np
+from analysis.valivali import find_critical_scale
+
+# Your data
+scales = np.logspace(0, 2, 50)  # 1 to 100 km
+measurements = your_observable_function(scales)
+
+# Find critical scale
+sigma_c, confidence_interval, stats = find_critical_scale(
+    scales, 
+    measurements,
+    observable_type='gradient',  # Recommended!
+    bootstrap_n=10000
+)
+
+print(f"Critical scale: {sigma_c:.2f} [{confidence_interval[0]:.2f}, {confidence_interval[1]:.2f}]")
+print(f"Peak clarity κ = {stats['kappa']:.2f}")
+print(f"Significance p = {stats['p_value']:.4f}")
+```
+
 ## License
 Copyright (c) 2025 ForgottenForge.xyz
 
@@ -25,18 +63,3 @@ SPDX-License-Identifier: AGPL-3.0-or-later OR Commercial
 
 - Email: nfo@forgottenforge.xyz
 - Web: https://www.forgottenforge.xyz
-
-## Troubleshooting
-
-- Braket not installed:
-    
-    `pip install amazon-braket-sdk` and configure AWS credentials.
-    
-- DD gets “optimized away”:
-    
-    Ensure barriers are inserted; verify post‑transpile gate counts and depth.
-    
-- Diverging success rates:
-    
-    Check calibration window, reduce shots for pilot runs, set simulator seeds, and compare manifests.
-    
