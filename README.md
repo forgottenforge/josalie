@@ -7,6 +7,10 @@
 
 This repository contains all code, data, documentation, and resources associated with the paper "A Susceptibility-Based Methodology for Characteristic Scale Identification: Preliminary Validation Across Five Complex Systems" by ForgottenForge.
 
+
+https://github.com/user-attachments/assets/558c8da1-0094-4366-8bcb-16c98e8d6d04
+
+
 ## 🎓 Theoretical Background
 
 The susceptibility χ(σ) quantifies system response to scale changes:
